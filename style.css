@@ -1,0 +1,130 @@
+/* Form Layout */
+.product-list {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+.product-entries {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-entry {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr auto;
+    align-items: self-start;
+    gap: 15px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-entry p {
+    margin: 5px;
+}
+
+.product-entry:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.product-entry input,
+.product-entry textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.product-entry input:focus,
+.product-entry textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+.product-entry textarea {
+    height:50px;
+}
+
+/* Form Fields */
+.wpcf7-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="number"],
+.wpcf7-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Buttons */
+.add-product {
+    margin: 10px 0;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.remove-product {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    height: fit-content;
+    align-self: center;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+/* Submit Button */
+.wpcf7-submit {
+    background: #2196F3;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.wpcf7-submit:hover {
+    background: #1976D2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-entry {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .remove-product {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
